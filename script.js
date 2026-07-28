@@ -1,5 +1,5 @@
 /**
- * ZENITH TASK - PREMIUM PRODUCTIVITY SUITE ENGINE
+ * TO-DO APP - PREMIUM PRODUCTIVITY SUITE ENGINE
  * Core Vanilla JavaScript Application Module (ES6+)
  */
 
@@ -9,10 +9,10 @@
    1. APPLICATION STATE & STORAGE ENGINE
    ========================================================================== */
 const STORAGE_KEYS = {
-  TASKS: 'zenith_tasks_v1',
-  CATEGORIES: 'zenith_categories_v1',
-  PREFERENCES: 'zenith_preferences_v1',
-  ACTIVITIES: 'zenith_activities_v1'
+  TASKS: 'todo_tasks_v1',
+  CATEGORIES: 'todo_categories_v1',
+  PREFERENCES: 'todo_preferences_v1',
+  ACTIVITIES: 'todo_activities_v1'
 };
 
 const DEFAULT_CATEGORIES = ['Work', 'Personal', 'Study', 'Shopping', 'Fitness'];
@@ -20,7 +20,7 @@ const DEFAULT_CATEGORIES = ['Work', 'Personal', 'Study', 'Shopping', 'Fitness'];
 const SAMPLE_TASKS = [
   {
     id: 'task-101',
-    title: '🚀 Launch Zenith Productivity App Specs',
+    title: '🚀 Launch To-Do App Specs',
     description: 'Finalize glassmorphism & neumorphism design system, verify mobile layout breakpoints, and test local storage sync.',
     priority: 'Urgent',
     category: 'Work',
@@ -1296,7 +1296,7 @@ function exportBackupData() {
   const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(AppState, null, 2));
   const downloadAnchor = document.createElement('a');
   downloadAnchor.setAttribute("href", dataStr);
-  downloadAnchor.setAttribute("download", `zenith_tasks_backup_${new Date().toISOString().split('T')[0]}.json`);
+  downloadAnchor.setAttribute("download", `todo_tasks_backup_${new Date().toISOString().split('T')[0]}.json`);
   document.body.appendChild(downloadAnchor);
   downloadAnchor.click();
   downloadAnchor.remove();
